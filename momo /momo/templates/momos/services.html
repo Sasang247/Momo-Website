@@ -1,0 +1,143 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<style>
+    .card{
+        margin-block-start: 5rem;
+        border: white;
+        margin: 6rem;
+    }
+    h1{
+        
+        font-size:xxx-large;
+        font-style: italic,normal;
+        font-family: Brush Script MT;
+        color: #305a5a;
+       
+    
+    
+    }
+    h2{
+        font-size: larger;
+        color: rgba(103, 100, 100, 0.9);
+        word-spacing: 15px;
+        font-weight: bold;
+    }
+
+    h3{
+        font-size: xx-large;
+        font-weight: bolder;
+    }
+    h4{
+        font-size: xx-large;
+        font-weight: bolder;
+    }
+    h5{
+        font-size: xxx-large;
+        font-weight: bolder;
+    }
+
+
+    .action {
+    color:black;
+    font-size: large;
+    display: inline-block;
+    padding: 5px 9px;
+    background-color: #347474;
+    color: white;
+    text-decoration: none;
+    border-radius: 41px;
+    }
+</style>
+<div class="card mb-3" style="max-width: 100%;">
+    <div class="row g-0">
+      <div class="col-md-6">
+        <div class="card-body">
+            <br>
+            <br>
+            <br>
+          <h1 class="card-title">Our Services</h1>
+          <br>
+          <br>
+          <br>
+
+          <h2>KNOWING OUR CUSTOMER NEEDS</h2>
+          <h3 style="color: #f96d00;">We're more than just momos.</h3>
+          <h4>we're a full-service dining experince</h4>
+         
+         
+        
+        </div>
+      </div>
+      <div class="col-md-6">
+        <img src="https://i.postimg.cc/kgpHrJkm/temp-Imagej-Guk3-U.jpg" class="img-fluid rounded-start" alt="...">
+      </div>
+    </div>
+</div>
+<div class="card mb-3" style="max-width: 100%;">
+    <div class="row g-0">
+      <div class="col-md-6">
+        <img src="https://i.postimg.cc/L62H0Dpp/temp-Image-Pz5a-Rk.jpg" class="img-fluid rounded-start" alt="...">
+      </div>
+      <div class="col-md-6">
+        <div class="card-body">
+
+          <br>
+          <h3>
+            <span>
+                <img src="https://i.postimg.cc/zfKdHnPd/temp-Imaget86-Koz.jpg" alt="Logo" class="logo">
+            </span>
+
+        </h3>
+        
+          <!-- <h3 style="font-size: xxx-large;">🎉</h3> -->
+          <h4> Private Party</h4>
+          <p style="font-size: x-large;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus veniam autem ratione beatae alias velit odio quam voluptatum officia assumenda itaque repellendus magni explicabo voluptatem voluptas, non, tenetur illum mollitia!</p>
+          
+        </div>
+      </div>
+    </div>
+</div>
+
+
+
+
+<div class="card mb-3" style="max-width: 100%;">
+    <div class="row g-0">
+      <div class="col-md-6">
+        <div class="card-body">
+
+            <h3>
+                <span>
+                    <img src="https://i.postimg.cc/RFcbyjrQ/temp-Image-EWEPm-O.jpg" alt="Logo" class="logo">
+                </span>
+    
+            </h3>
+          
+          <h4>Catering</h4>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi commodi quae, corrupti sapiente et delectus, cumque provident a, fugit soluta impedit. At enim culpa voluptas soluta quia obcaecati qui rerum?</p>
+        
+        </div>
+      </div>
+      <div class="col-md-6">
+        <img src="https://i.postimg.cc/L62H0Dpp/temp-Image-Pz5a-Rk.jpg" class="img-fluid rounded-start" alt="...">
+      </div>
+    </div>
+</div>
+
+
+<div class="card">
+    <center>
+    <h5>Got any queries? </h5>
+    <br>
+    <p style="color:rgba(103, 100, 100, 0.9);">If you have any queries, sendus a message. Our Friendly team would love to hear from you.</p>
+    <br>
+    <a class="action" href="{% url 'contact' %}">Get in Touch</a>
+   
+
+    </center>
+    
+  </div>
+
+{% endblock %}

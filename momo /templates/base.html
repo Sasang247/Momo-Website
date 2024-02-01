@@ -1,0 +1,252 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    {% block title %}
+    {% endblock title %}
+   
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    {% block customcss %}
+    {% endblock customcss %}
+<style>
+    .navbar-brand{
+        font-size: 2rem;
+    }
+
+    .navbar{
+        padding-top: 1.5rem;
+        padding-bottom: -0.72rem;
+       
+    }
+    .navbar-nav .nav-item a:hover {
+            text-decoration: underline; /* Add an underline effect on hover */
+            /* You can add any other styles for the hover effect here */
+    }
+    
+    .btn{
+        font-size: 1.5rem;
+    }
+    .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .show>.nav-link {
+    color: rgba(103, 100, 100, 0.9);
+}
+    body{
+        font-size: 1.2rem;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        
+    }
+    .navbar-nav .nav-item + .nav-item {
+             margin-left: 28px; /* Adjust the value as needed */
+    }
+
+
+   .btn-success {
+    
+    color: white;
+    background-color: #e36403;
+    border-color: #e36403;
+    border-radius: 24rem;
+}
+footer{
+    font-size: small;
+}
+
+.navbar-brand img {
+      /* Add styles for the logo image */
+      max-width: 44px; /* Set a max width to control the size */
+      height: auto; /* Maintain aspect ratio */
+      display: inline-block; /* Ensure proper alignment with text */
+      margin-right: -8px; /* Adjust as needed for spacing */
+    }
+/* for footer */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+body{
+	line-height: 1.5;
+	font-family: 'Poppins', sans-serif;
+}
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+}
+.container{
+	max-width: 1000px;
+	margin:auto;
+}
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+ul{
+	list-style: none;
+}
+.footer{
+	background-color: white;
+    padding: 20px 0;
+}
+.footer-col{
+   width: 25%;
+   padding: 0 15px;
+}
+.footer-col h6{
+	font-size: 18px;
+    font-weight: bolder;
+	color:  #305a5a;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	
+	position: relative;
+}
+
+
+.footer-col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+.footer-col ul li a{
+	font-size: 14px;
+	text-transform: capitalize;
+	color: black;
+	text-decoration: none;
+	font-weight: 300;
+	color:rgb(72, 71, 71);
+	display: block;
+	transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+	color: gray;
+	padding-left: 8px;
+}
+.footer-col .social-links a{
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	background-color:gray;
+	margin:0 10px 10px 0;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	color: #ffffff;
+	transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+	color: #24262b;
+	background-color: #ffffff;
+}
+
+/*responsive*/
+@media(max-width: 767px){
+  .footer-col{
+    width: 50%;
+    margin-bottom: 30px;
+}
+}
+@media(max-width: 574px){
+  .footer-col{
+    width: 100%;
+}
+}
+
+
+
+</style>
+
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="{% url 'home' %}"><img src="https://i.postimg.cc/3rtsg0hK/temp-Image-ZEttp-R.jpg" alt="Momos Logo"> momos</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse d-flex justify-content-center" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="{% url 'about' %}">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="{% url 'menu' %}">Our Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="{% url 'services' %}">Our Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="{% url 'allergy' %}">Allergy Advice</a>
+                    </li>
+                </ul>
+            </div>
+            <a href="{% url 'contact' %}">
+                <button type="button" class="btn btn-success">Contact US</button>
+            </a>
+        </div>
+    </nav>
+    
+
+    {% block content %}
+    {% endblock content %}
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZF6fDQq2WxLrBfxkH5njr2oFuLdE+u7ldf1XfPU4LrMby9Y3mm/4PR" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js" integrity="sha384-mQwBtJpjtXz2lYKAzQ9PujXBwuOB/5l5YhI1lNTNK6Zk2OQ1b7niuC9aQLD6t0iP" crossorigin="anonymous"></script>
+
+    {% block script %}
+    {% endblock script %}
+</body>
+
+<center>
+    <footer>
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col">
+                        <center>
+                        <h6>momos</h6>
+                        <ul>
+                           
+                            <li><a href="{% url 'about' %}">About Us</a></li>
+                            <li><a href="{% url 'menu' %}">Our Menu</a></li>
+                            <li><a href="{% url 'services' %}">Our Services</a></li>
+                            <li><a href="{% url 'contact' %}">Contact Us</a></li>
+
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h6>Legal</h6>
+                        <ul>
+                            <li><a href="#">Terms&Conditions</a></li>
+                            <li><a href="#">Privacy policy</a></li>
+                            <li><a href="#">Support</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-col">
+                        <h6>follow us</h6>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </center>
+                    </div>
+                </div>
+            </div>
+       </footer>
+       <hr>
+       <center>
+        <p style="font-size: small;">Copright ©2024 Shashank Thapa. All Rights Reserved </p>
+       </center>
+      
+
+    </footer>
+</center>
+
+
+</html>

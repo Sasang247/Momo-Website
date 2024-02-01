@@ -1,0 +1,116 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<style>
+
+.img-fluid {
+    max-width: 50%;
+    height: auto;
+}
+    .card{
+        margin-block-start: 5rem;
+        border: white;
+        margin: 6rem;
+    }
+    h1{
+        
+        font-size:xxx-large;
+        font-style: italic,normal;
+        font-family: Brush Script MT;
+        color: #305a5a;
+    }
+    h2{
+        color:rgba(103, 100, 100, 0.9) ;
+        font-weight: 300;
+        font-size: x-large;
+    }
+    h3,h4{
+        font-weight: 800;
+        font-size:xx-large;
+        color: rgb(49, 49, 49);
+    }
+    h5{
+         font-weight: 800;
+        font-size:xx-large;
+    }
+
+
+    /* card editing */
+   
+
+h7{
+    font-family: Papyrus;
+}
+ul{
+    font-style: Monaco;
+}
+</style>
+<div class="card mb-3" style="max-width: 100%;">
+    <div class="row g-0">
+      <div class="col-md-6">
+        <div class="card-body">
+            <br>
+            <br>
+            
+          <h1 class="card-title">Allergy Advices</h1>
+          <br>
+          <br>
+          <br>
+
+          <h2>AT OUR RESTURANT</h2>
+          <h3>We use only freshest and highest</h3>
+          <h4>quality ingredients in all our dishes,</h4>
+          <h5 style="color:#dd6001;">and offer transparecy in our ingredient</h5>
+          
+         
+        
+        </div>
+      </div>
+      <div class="col-md-6">
+        <img src="https://i.postimg.cc/kgpHrJkm/temp-Imagej-Guk3-U.jpg" class="img-fluid rounded-start" alt="...">
+      </div>
+    </div>
+</div>
+
+<center>
+    <h7 style="font-weight: bolder; font-size: xxx-large; color: #cd5b03;">------- Ingredients </h7>
+    <h7 style="font-weight: bolder; font-size: xxx-large; color:black">used -------------</h7>
+</center>
+<br>
+<br>
+<center>
+    
+    <div class="card2">
+        {% for category, ingredients in data.items %}
+            <h6 style="text-align: center; font-weight: bolder; font-size: xx-large;">{{ category }}</h6>
+            <br>
+            {% for i in ingredients %}
+             <ul>
+                <li >•{{ i.title }}</li>
+             </ul>
+            
+                    
+            {% endfor %}
+        {% endfor %}
+    </div>
+    
+
+    
+</center>
+<br>
+<center>
+    <h7 style="font-weight: bolder; font-size: xxx-large; color: #cd5b03;">------- Allergy </h7>
+    <h7 style="font-weight: bolder; font-size: xxx-large; color:black">Advice -------------</h7>
+    <br>
+    <br>
+    <p style="text-align:justify; font-family: Georgia;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur rem sint praesentium. Ipsa perspiciatis fuga harum maxime dolorum. Praesentium delectus eaque sapiente rem optio saepe fugiat corrupti? Commodi, ratione eos?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil quae Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab dicta hic quibusdam rerum incidunt deserunt? Aliquam recusandae fuga illum dolorum, animi tenetur ipsam cupiditate maiores quas quis saepe autem dicta. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum aut recusandae non, iusto deserunt corrupti. Culpa sed obcaecati ab laudantium vel sequi, sunt laborum, corrupti, et dicta aspernatur? Neque, excepturi.lore Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates itaque beatae maxime, eos labore, similique architecto voluptate dolore harum animi repellendus nobis dolores, incidunt quisquam unde atque est vel provident. Lorem ipsum dolor sit amet consectetur adipisicing elit. Non similique quis voluptatibus impedit accusamus laudantium eaque est necessitatibus quia nulla enim eius rerum, neque quod, quidem soluta exercitationem beatae quasi.l Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore accusantium eveniet corrupti, explicabo et perferendis laudantium repudiandae recusandae tempora doloribus dolore nihil qui deserunt, saepe aliquid fugit, eos ipsam? Inventore! deserunt nulla tenetur ullam ut architecto repudiandae sequi suscipit? Cupiditate harum fugiat quia ullam quasi asperiores aliquid cumque adipisci</p>
+    <img src="https://i.postimg.cc/4NKpsCFG/temp-Image-ZTz-S96.jpg" class="img-fluid rounded-start" alt="...">
+</center>
+<br>
+<br>
+
+
+
+
+{% endblock %}
