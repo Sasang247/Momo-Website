@@ -1,0 +1,120 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<style>
+
+.card-text {
+      color: #333; /* Default color for the text */
+      display: inline; /* Ensure all <p> elements are inline */
+      margin: 0; /* Remove default margin */
+    }
+
+    .highlight-varieties {
+
+      font-weight: bolder;
+      color: #f96d00; /* Set the color for the "20+ varieties" part */
+    }
+
+.card{
+    border-color: white;
+    margin: 1rem;
+}
+h5{
+    font-size: 4rem;
+    font-weight: bolder;
+
+}
+.action {
+    
+    color:black;
+    font-size: large;
+    display: inline-block;
+    padding: 22px 49px;
+    background-color: #347474;
+    color: white;
+    text-decoration: none;
+    border-radius: 41px;
+}
+h6{
+    font-size: 4rem;
+    font-weight: bolder;
+
+}
+</style>
+<div class="card mb-3" style="max-width: 100%;">
+    <div class="row g-0">
+      <div class="col-md-6">
+        <div class="card-body">
+        <br>
+        <br>
+        <br>
+
+
+          <h5 class="card-title">The #One <br>Momo Restaurant</h5>
+          <br>
+          <br>
+
+          <p class="card-text">More than </p>
+          <p class="card-text highlight-varieties">20+ varieties</p>
+          <p class="card-text"> of momo available for you</p>    
+          <br>
+          <br>
+
+          <a class="action" href="{% url 'foodmenu' %}">Explore Food Menu --></a>
+        
+        </div>
+      </div>
+      <div class="col-md-6">
+        <img src="https://i.postimg.cc/05F0TYqW/temp-Imagesm-MNTx.jpg" class="img-fluid rounded-start" alt="...">
+      </div>
+    </div>
+</div>
+<div class="card mb-3" style="max-width: 100%;">
+    <div class="row g-0">
+      <div class="col-md-6">
+        <img src="https://i.postimg.cc/MZNfzBYv/temp-Image-Qefuin.jpg" class="img-fluid rounded-start" alt="...">
+      </div>
+      <div class="col-md-6">
+        <div class="card-body">
+          <h5 class="card-title">Why Customers Love Us </h5>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+          <br>
+          <a class="action" href="{% url 'foodmenu' %}">Explore Our Menu --></a>
+        </div>
+      </div>
+    </div>
+</div>
+<br>
+<center>
+    <div>
+        <h6 style="display: inline;">200+</h6>
+        <h6 style="color: #f96d00; display: inline; font-family: Georgia;">Happy Customer</h6>
+    </div>
+</center>
+<div class="card mb-3" style="max-width: 100%;">
+  <div class="row g-0">
+    <div class="col-md-6">
+      <div class="card-body">
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          
+        <h1  style=" font-weight: bolder;font-size: xxx-large;color: #347474;"class="card-title ">What our customer says </h1><h1 style=" font-weight: bolder;font-size: xxx-large;">about us</h1>
+        <br>
+      
+        <br>
+        <p style="font-family:Verdana;">Only the best Momo you can find it in the markert.Diffrent varities of momo to choose from. Will bevisiting soon.</p>
+        <p style="font-weight: bolder;">Livia Dias</p>
+      
+      </div>
+    </div>
+    <div class="col-md-6">
+      <img src="https://i.postimg.cc/kgpHrJkm/temp-Imagej-Guk3-U.jpg" class="img-fluid rounded-start" alt="...">
+    </div>
+  </div>
+</div>
+{% endblock %}
+	
